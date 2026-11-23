@@ -22,10 +22,10 @@ import { Produto } from '../../models/produto';
         <p-message severity="error" text="Produto não encontrado ou erro ao consultar a API." />
       } @else if (produto.hasValue()) {
         @let p = produto.value();
-        <article class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
-          <div class="bg-gradient-to-r from-indigo-600 to-violet-600 p-6 text-white">
-            <p class="text-xs uppercase tracking-widest text-white/70">Produto #{{ p.id }}</p>
-            <h1 class="mt-1 text-2xl font-bold">{{ p.nome }}</h1>
+        <article class="surface-card overflow-hidden rounded-2xl">
+          <div class="border-b border-slate-100 p-6">
+            <p class="text-xs font-medium uppercase tracking-widest text-slate-400">Produto #{{ p.id }}</p>
+            <h1 class="mt-1 text-2xl font-semibold tracking-tight text-slate-950">{{ p.nome }}</h1>
           </div>
           <dl class="grid gap-6 p-6 sm:grid-cols-2">
             <div class="sm:col-span-2">
@@ -38,7 +38,7 @@ import { Produto } from '../../models/produto';
             </div>
             <div>
               <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Preço</dt>
-              <dd class="mt-1 text-2xl font-bold text-emerald-600">{{ p.preco | currency: 'BRL' }}</dd>
+              <dd class="mt-1 text-2xl font-semibold text-slate-950">{{ p.preco | currency: 'BRL' }}</dd>
             </div>
           </dl>
           <div class="flex justify-end gap-2 border-t border-slate-100 bg-slate-50 p-4">

@@ -16,9 +16,9 @@ import { ProdutoStateService } from '../../services/produto-state.service';
   imports: [RouterLink, ButtonModule, MessageModule, ProdutoFiltro, ProdutoResumo, ProdutoTabela],
   template: `
     <section class="space-y-6">
-      <div class="flex flex-wrap items-end justify-between gap-3">
+      <div class="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <h1 class="text-2xl font-bold tracking-tight text-slate-900">Produtos</h1>
+          <h1 class="text-2xl font-semibold tracking-tight text-slate-950">Produtos</h1>
           <p class="text-sm text-slate-500">Liste, consulte, edite e remova os produtos cadastrados.</p>
         </div>
         <p-button label="Novo produto" routerLink="/produtos/novo" styleClass="!rounded-xl shadow" />

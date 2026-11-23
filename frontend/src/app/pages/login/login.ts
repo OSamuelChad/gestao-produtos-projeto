@@ -13,12 +13,12 @@ import { AuthService } from '../../core/auth.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [FormField, ButtonModule, InputTextModule, MessageModule],
   template: `
-    <section class="mx-auto mt-10 max-w-md">
-      <form (submit)="entrar($event)" novalidate class="overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-slate-200">
-        <div class="bg-gradient-to-r from-indigo-600 to-violet-600 p-8 text-center text-white">
-          <div class="mx-auto mb-3 grid size-12 place-items-center rounded-2xl bg-white/20 text-2xl font-bold">G</div>
-          <h1 class="text-2xl font-bold">Bem-vindo</h1>
-          <p class="text-sm text-white/80">Entre para gerenciar seus produtos</p>
+    <section class="mx-auto flex min-h-[calc(100vh-132px)] max-w-md items-center">
+      <form (submit)="entrar($event)" novalidate class="surface-card w-full overflow-hidden rounded-2xl">
+        <div class="border-b border-slate-100 p-8 text-center">
+          <div class="mx-auto mb-4 grid size-11 place-items-center rounded-xl bg-slate-900 text-lg font-semibold text-white">G</div>
+          <h1 class="text-2xl font-semibold tracking-tight text-slate-950">Bem-vindo</h1>
+          <p class="mt-1 text-sm text-slate-500">Entre para gerenciar seus produtos</p>
         </div>
 
         <div class="space-y-5 p-6">

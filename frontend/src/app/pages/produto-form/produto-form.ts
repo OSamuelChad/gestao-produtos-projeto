@@ -23,10 +23,10 @@ import { ProdutoStateService } from '../../services/produto-state.service';
     <section class="mx-auto max-w-2xl space-y-6">
       <a routerLink="/produtos" class="text-sm font-medium text-indigo-600 hover:underline">← Voltar para a lista</a>
 
-      <form (submit)="salvar($event)" novalidate class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
-        <div class="bg-gradient-to-r from-indigo-600 to-violet-600 p-6 text-white">
-          <h1 class="text-2xl font-bold">{{ id() ? 'Editar produto' : 'Novo produto' }}</h1>
-          <p class="text-sm text-white/80">Preencha os dados abaixo. Campos com * são obrigatórios.</p>
+      <form (submit)="salvar($event)" novalidate class="surface-card overflow-hidden rounded-2xl">
+        <div class="border-b border-slate-100 p-6">
+          <h1 class="text-2xl font-semibold tracking-tight text-slate-950">{{ id() ? 'Editar produto' : 'Novo produto' }}</h1>
+          <p class="mt-1 text-sm text-slate-500">Campos com * são obrigatórios.</p>
         </div>
 
         <div class="space-y-5 p-6">

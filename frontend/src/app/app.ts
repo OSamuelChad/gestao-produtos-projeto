@@ -10,7 +10,7 @@ import { Header } from './layout/header';
   imports: [RouterOutlet, Header, ToastModule, ConfirmDialogModule],
   template: `
     <app-header />
-    <main class="mx-auto w-full max-w-6xl px-4 py-8">
+    <main class="app-shell-main mx-auto w-full max-w-6xl px-4 py-6 sm:py-8">
       <router-outlet />
     </main>
     <p-toast position="top-right" />

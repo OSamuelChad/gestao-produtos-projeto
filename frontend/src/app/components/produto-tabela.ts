@@ -11,7 +11,7 @@ import { Produto } from '../models/produto';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CurrencyPipe, TableModule, ButtonModule, TagModule],
   template: `
-    <div class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
+    <div class="table-shell surface-card overflow-hidden rounded-2xl">
       <p-table [value]="produtos()" [paginator]="produtos().length > 8" [rows]="8" [rowHover]="true" styleClass="text-sm">
         <ng-template #header>
           <tr>

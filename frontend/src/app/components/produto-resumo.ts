@@ -7,20 +7,20 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CurrencyPipe],
   template: `
-    <div class="grid gap-4 sm:grid-cols-3">
-      <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+    <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+      <div class="surface-card rounded-2xl p-5">
         <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Produtos</p>
-        <p class="mt-1 text-3xl font-bold text-indigo-600">{{ exibidos() }}</p>
+        <p class="mt-2 text-2xl font-semibold text-slate-950">{{ exibidos() }}</p>
         <p class="text-xs text-slate-400">de {{ total() }} cadastrados</p>
       </div>
-      <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+      <div class="surface-card rounded-2xl p-5">
         <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Valor somado</p>
-        <p class="mt-1 text-3xl font-bold text-emerald-600">{{ valorTotal() | currency: 'BRL' }}</p>
+        <p class="mt-2 text-2xl font-semibold text-slate-950">{{ valorTotal() | currency: 'BRL' }}</p>
         <p class="text-xs text-slate-400">considerando os filtros</p>
       </div>
-      <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+      <div class="surface-card rounded-2xl p-5">
         <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Categorias</p>
-        <p class="mt-1 text-3xl font-bold text-violet-600">{{ categorias() }}</p>
+        <p class="mt-2 text-2xl font-semibold text-slate-950">{{ categorias() }}</p>
         <p class="text-xs text-slate-400">diferentes</p>
       </div>
     </div>

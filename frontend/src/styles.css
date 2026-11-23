@@ -3,7 +3,91 @@
 
 @import "tailwindcss";
 
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-600: #5b5bd6;
+  --color-brand-700: #4a4ab7;
+}
+
+:root {
+  color-scheme: light;
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background: #f5f7fb;
+  color: #1e293b;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
 body {
-  @apply bg-slate-100 text-slate-800 antialiased;
-  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  @apply bg-[#f7f7f5] text-slate-800 antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+input[pInputText],
+textarea[pTextarea] {
+  min-height: 42px;
+  border-radius: 10px !important;
+}
+
+.app-shell-main {
+  min-height: calc(100vh - 68px);
+}
+
+.surface-card {
+  border: 1px solid #e8e8e4;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.025);
+}
+
+.table-shell .p-datatable-table {
+  min-width: 760px;
+}
+
+.table-shell .p-datatable-thead > tr > th {
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.table-shell .p-datatable-tbody > tr > td {
+  border-color: #eef2f7;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+
+.table-shell .p-datatable-tbody > tr:hover {
+  background: #f8fafc;
+}
+
+@media (max-width: 640px) {
+  .app-shell-main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .table-shell .p-datatable-wrapper {
+    overflow-x: auto;
+  }
 }

@@ -12,7 +12,7 @@ import { InputTextModule } from '@openng/optimus-ui/inputtext';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [InputTextModule, ButtonModule],
   template: `
-    <div class="flex flex-col gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200 sm:flex-row sm:items-center">
+    <div class="surface-card flex flex-col gap-3 rounded-2xl p-4 sm:flex-row sm:items-center">
       <input
         pInputText
         type="search"
