@@ -14,7 +14,7 @@ import { Produto } from '../../models/produto';
   imports: [CurrencyPipe, RouterLink, ButtonModule, MessageModule, TagModule],
   template: `
     <section class="mx-auto max-w-2xl space-y-6">
-      <a routerLink="/produtos" class="text-sm font-medium text-indigo-600 hover:underline">← Voltar para a lista</a>
+      <a routerLink="/produtos" class="block w-fit text-sm font-medium text-indigo-600 no-underline hover:underline">← Voltar para a lista</a>
 
       @if (produto.isLoading()) {
         <p class="py-10 text-center text-slate-500">Carregando…</p>
@@ -34,7 +34,7 @@ import { Produto } from '../../models/produto';
             </div>
             <div>
               <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Categoria</dt>
-              <dd class="mt-1"><p-tag [value]="p.categoria" severity="info" styleClass="!rounded-full" /></dd>
+              <dd class="mt-1"><p-tag [value]="p.categoria" severity="secondary" styleClass="!rounded-full !bg-indigo-50 !text-indigo-700 !font-medium" /></dd>
             </div>
             <div>
               <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Preço</dt>

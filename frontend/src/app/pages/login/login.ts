@@ -16,7 +16,7 @@ import { AuthService } from '../../core/auth.service';
     <section class="mx-auto flex min-h-[calc(100vh-132px)] max-w-md items-center">
       <form (submit)="entrar($event)" novalidate class="surface-card w-full overflow-hidden rounded-2xl">
         <div class="border-b border-slate-100 p-8 text-center">
-          <div class="mx-auto mb-4 grid size-11 place-items-center rounded-xl bg-slate-900 text-lg font-semibold text-white">G</div>
+          <div class="mx-auto mb-4 grid size-11 place-items-center rounded-xl bg-indigo-600 text-lg font-semibold text-white shadow-sm">G</div>
           <h1 class="text-2xl font-semibold tracking-tight text-slate-950">Bem-vindo</h1>
           <p class="mt-1 text-sm text-slate-500">Entre para gerenciar seus produtos</p>
         </div>
@@ -46,7 +46,7 @@ import { AuthService } from '../../core/auth.service';
             }
           </div>
 
-          <p-button type="submit" label="Entrar" styleClass="w-full" [loading]="f().submitting()" />
+          <p-button type="submit" label="Entrar" styleClass="w-full" class="block" [loading]="f().submitting()" />
 
           <p class="rounded-lg bg-slate-50 p-3 text-center text-xs text-slate-500">
             Usuário de demonstração:<br />

@@ -4,7 +4,6 @@ import { Router, RouterLink } from '@angular/router';
 import { MessageService } from '@openng/optimus-ui/api';
 import { ButtonModule } from '@openng/optimus-ui/button';
 import { InputTextModule } from '@openng/optimus-ui/inputtext';
-import { TextareaModule } from '@openng/optimus-ui/textarea';
 import { firstValueFrom } from 'rxjs';
 import { CATEGORIAS_SUGERIDAS, ProdutoInput } from '../../models/produto';
 import { ProdutoStateService } from '../../services/produto-state.service';
@@ -18,10 +17,10 @@ import { ProdutoStateService } from '../../services/produto-state.service';
 @Component({
   selector: 'app-produto-form',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [FormField, RouterLink, ButtonModule, InputTextModule, TextareaModule],
+  imports: [FormField, RouterLink, ButtonModule, InputTextModule],
   template: `
     <section class="mx-auto max-w-2xl space-y-6">
-      <a routerLink="/produtos" class="text-sm font-medium text-indigo-600 hover:underline">← Voltar para a lista</a>
+      <a routerLink="/produtos" class="block w-fit text-sm font-medium text-indigo-600 no-underline hover:underline">← Voltar para a lista</a>
 
       <form (submit)="salvar($event)" novalidate class="surface-card overflow-hidden rounded-2xl">
         <div class="border-b border-slate-100 p-6">
@@ -42,7 +41,7 @@ import { ProdutoStateService } from '../../services/produto-state.service';
 
           <div class="flex flex-col gap-1.5">
             <label for="descricao" class="text-sm font-medium text-slate-700">Descrição *</label>
-            <textarea id="descricao" pTextarea rows="4" class="w-full" [formField]="f.descricao"></textarea>
+            <textarea id="descricao" rows="4" class="p-component p-inputtext field" [formField]="f.descricao"></textarea>
             @if (f.descricao().touched() && f.descricao().invalid()) {
               @for (e of f.descricao().errors(); track e) {
                 <small class="text-red-600">{{ e.message }}</small>

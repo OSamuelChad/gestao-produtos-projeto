@@ -24,12 +24,12 @@ import { Produto } from '../models/produto';
         </ng-template>
         <ng-template #body let-p>
           <tr>
-            <td class="text-slate-400">#{{ p.id }}</td>
+            <td class="text-xs tabular-nums text-slate-400">#{{ p.id }}</td>
             <td>
               <p class="font-semibold text-slate-800">{{ p.nome }}</p>
               <p class="line-clamp-1 max-w-md text-xs text-slate-500">{{ p.descricao }}</p>
             </td>
-            <td><p-tag [value]="p.categoria" severity="info" styleClass="!rounded-full" /></td>
+            <td><p-tag [value]="p.categoria" severity="secondary" styleClass="!rounded-full !bg-indigo-50 !text-indigo-700 !font-medium" /></td>
             <td class="text-right font-medium tabular-nums">{{ p.preco | currency: 'BRL' }}</td>
             <td class="text-right">
               <div class="flex justify-end gap-1">
