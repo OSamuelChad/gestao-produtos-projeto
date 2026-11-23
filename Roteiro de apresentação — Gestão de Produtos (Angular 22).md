@@ -98,5 +98,3 @@ No template do pai, mostre `[(busca)]="state.busca"`. É um `model()` ligado dir
 | O que acontece quando o token expira? | A API responde 401, o interceptor faz logout e o guard manda para o login. O `AuthService` também checa o `exp` do token ao carregar. |
 | Por que `httpResource` no detalhe e `HttpClient` no resto? | `httpResource` é reativo e fica ótimo para leitura que depende de um signal. Para escrita (POST, PUT, DELETE) uso `HttpClient`. |
 | Por que lazy loading? | Cada tela vira um chunk separado, então o carregamento inicial é menor. |
-
-**Dica:** ensaie o fluxo de demonstração uma vez com tudo rodando e deixe os arquivos citados abertos em abas, na ordem do roteiro, para não perder tempo procurando durante a apresentação.
